@@ -1,0 +1,11 @@
+<h2>Food list</h2>
+<div>
+<ul class = foods>
+  <li  *ngFor="let foods of foodies">
+  <a routerLink="/detail/{{foods.id}}">
+    <span class = "badge">id : {{foods.id}}</span>    name : {{foods.name}}
+  </a>
+   </li>
+</ul>
+</div>
+<app-food-detail [food]="selectedFood"></app-food-detail>
