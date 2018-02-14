@@ -1,11 +1,20 @@
+
 <h2>Food list</h2>
 <div>
-<ul class = foods>
-  <li  *ngFor="let foods of foodies">
+<ul class = "foods">
+  <li class = main *ngFor="let foods of foodies">
   <a routerLink="/detail/{{foods.id}}">
-    <span class = "badge">id : {{foods.id}}</span>    name : {{foods.name}}
+    <span class = "badge">id : {{foods.id}}</span>   <span> name : {{foods.name}} </span>   </a>
+    <a (click)="Delete(foods)">
+    <i class="fas fa-trash-alt" ></i>
   </a>
    </li>
+  
 </ul>
 </div>
+<label>New name:  </label>
+    <input [(ngModel)]="newFood" type="text" id ="name" placeholder="new name">
+
+<button (click)="Insert()">Insert new</button>
+
 <app-food-detail [food]="selectedFood"></app-food-detail>
