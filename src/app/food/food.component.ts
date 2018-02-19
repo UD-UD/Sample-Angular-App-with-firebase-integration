@@ -17,7 +17,6 @@ export class FoodComponent implements OnInit {
         .subscribe(X => this.foodies = X);
   }
   selectedFood : foods;
-
   onSelect(food: foods): void {
     this.selectedFood = food;
   }
