@@ -33,10 +33,19 @@ export class FoodService {
    
   }
 
-  async getData() 
+   getData() : void
   {
-    await this.dbReference.on('value', function (snap){this.firebaseData = snap.val()})
-    console.log(this.firebaseData)
+   // this.dbReference.on('value', function (snap){this.firebaseData = snap.val()})
+   this.dbReference.on("value", function(snapshot) {
+    this.getVal(snapshot.val());
+   
+   });
+  
+  }
+  getVal(obj)
+  {
+   this.firebaseData = obj;
+   console.log(this.firebaseData)
   }
   
    getFoods(): Observable<foods[]>
