@@ -35,13 +35,13 @@ export class FoodService {
   
   getFoods(): Observable<foods[]>
   {
-    this.firebaseData.subscribe(function(foodData){
-      Object.keys(foodData).forEach(function(key){
+    this.firebaseData.subscribe((foodData)=>{
+      Object.keys(foodData).forEach((key)=>{
         var name = foodData[key+''].name;
-        this.food = {id : key, name }
+        this.food = {id : parseInt(key), name:name }
         this.FOOD.push(this.food)
-      }.bind(this));
-    }.bind(this));
+      });
+    });
     return of(this.FOOD);
   }
 
