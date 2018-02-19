@@ -14,7 +14,7 @@ export class FoodDetailComponent implements OnInit {
   @Input() food: foods;
   constructor(private route: ActivatedRoute,
     private foodService: FoodService,
-    private location: Location) { console.log(route.snapshot.paramMap.get('id'))}
+    private location: Location) { }//console.log(route.snapshot.paramMap.get('id'))}
 
     getFood(): void {
       const id = +this.route.snapshot.paramMap.get('id');

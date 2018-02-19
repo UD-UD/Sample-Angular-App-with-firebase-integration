@@ -3,9 +3,9 @@
 <div>
 <ul class = "foods">
   <li class = main *ngFor="let foods of foodies">
-  <a routerLink="/detail/{{foods.id}}">
+  <a routerLink="/detail/{{foods.id}}" class = "routerLink">
     <span class = "badge">id : {{foods.id}}</span>   <span> name : {{foods.name}} </span>   </a>
-    <a (click)="Delete(foods)">
+    <a class ="trash" (click)="Delete(foods)">
     <i class="fas fa-trash-alt" ></i>
   </a>
    </li>

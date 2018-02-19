@@ -32,6 +32,12 @@
     position: relative;
     top: -3px;
   }
+  .routerLink{
+    text-decoration: none;
+  }
+  .trash{
+    float: right;
+  }
   .foods .badge {
     display: inline-block;
     font-size: small;
@@ -54,11 +60,10 @@
     background-color: #607D8B;
     line-height: 1em;
     position: relative;
-    left: -5px;
     top: -4px;
     height: 1.8em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
+   
+    border-radius: 4px 4px;
   }
   .foods.main{float: left;}
   .foods.main2{float: right;}
